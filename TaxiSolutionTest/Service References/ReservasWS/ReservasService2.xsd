@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:23065/ReservasService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" />
+  <xs:element name="CrearReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" minOccurs="0" name="reservaACrear" nillable="true" type="q1:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" minOccurs="0" name="CrearReservaResult" nillable="true" type="q2:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" minOccurs="0" name="reservaAObtener" nillable="true" type="q3:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" minOccurs="0" name="ObtenerReservaResult" nillable="true" type="q4:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" minOccurs="0" name="reservaAModificar" nillable="true" type="q5:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" minOccurs="0" name="ModificarReservaResult" nillable="true" type="q6:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" minOccurs="0" name="reservaAEliminar" nillable="true" type="q7:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarReservaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarReserva">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" minOccurs="0" name="ListarReservaResult" nillable="true" type="q8:ArrayOfReserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

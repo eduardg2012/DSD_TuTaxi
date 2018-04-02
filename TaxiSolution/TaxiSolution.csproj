@@ -91,12 +91,20 @@
   <ItemGroup>
     <Content Include="ApuntesImportantes.txt" />
     <Content Include="Archivos\DiagramaProcesoReservaUnicaTaxis.png" />
+    <Content Include="ReservasService.svc" />
     <Content Include="Service1.svc" />
     <Content Include="TaxiService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Reserva.cs" />
+    <Compile Include="Errores\AdministradorExcepciones.cs" />
+    <Compile Include="IReservasService.cs" />
     <Compile Include="ITaxiService.cs" />
+    <Compile Include="Persistencia\ReservaDAO.cs" />
+    <Compile Include="ReservasService.svc.cs">
+      <DependentUpon>ReservasService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

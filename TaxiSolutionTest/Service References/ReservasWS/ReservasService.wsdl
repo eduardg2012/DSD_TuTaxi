@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReservasService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:23065/ReservasService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:23065/ReservasService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TaxiSolution.Errores" />
+      <xsd:import schemaLocation="http://localhost:23065/ReservasService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:23065/ReservasService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TaxiSolution.Dominio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReservasService_CrearReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearReserva" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_CrearReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_CrearReserva_AdministradorExcepcionesFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/TaxiSolution.Errores" name="detail" element="q1:AdministradorExcepciones" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_ObtenerReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerReserva" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_ObtenerReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_ModificarReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarReserva" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_ModificarReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_ModificarReserva_AdministradorExcepcionesFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/TaxiSolution.Errores" name="detail" element="q2:AdministradorExcepciones" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_EliminarReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarReserva" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_EliminarReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_ListarReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarReserva" />
+  </wsdl:message>
+  <wsdl:message name="IReservasService_ListarReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarReservaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReservasService">
+    <wsdl:operation name="CrearReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservasService/CrearReserva" message="tns:IReservasService_CrearReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservasService/CrearReservaResponse" message="tns:IReservasService_CrearReserva_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReservasService/CrearReservaAdministradorExcepcionesFault" name="AdministradorExcepcionesFault" message="tns:IReservasService_CrearReserva_AdministradorExcepcionesFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservasService/ObtenerReserva" message="tns:IReservasService_ObtenerReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservasService/ObtenerReservaResponse" message="tns:IReservasService_ObtenerReserva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservasService/ModificarReserva" message="tns:IReservasService_ModificarReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservasService/ModificarReservaResponse" message="tns:IReservasService_ModificarReserva_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReservasService/ModificarReservaAdministradorExcepcionesFault" name="AdministradorExcepcionesFault" message="tns:IReservasService_ModificarReserva_AdministradorExcepcionesFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservasService/EliminarReserva" message="tns:IReservasService_EliminarReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservasService/EliminarReservaResponse" message="tns:IReservasService_EliminarReserva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservasService/ListarReserva" message="tns:IReservasService_ListarReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservasService/ListarReservaResponse" message="tns:IReservasService_ListarReserva_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReservasService" type="tns:IReservasService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearReserva">
+      <soap:operation soapAction="http://tempuri.org/IReservasService/CrearReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdministradorExcepcionesFault">
+        <soap:fault use="literal" name="AdministradorExcepcionesFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerReserva">
+      <soap:operation soapAction="http://tempuri.org/IReservasService/ObtenerReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarReserva">
+      <soap:operation soapAction="http://tempuri.org/IReservasService/ModificarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdministradorExcepcionesFault">
+        <soap:fault use="literal" name="AdministradorExcepcionesFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReserva">
+      <soap:operation soapAction="http://tempuri.org/IReservasService/EliminarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarReserva">
+      <soap:operation soapAction="http://tempuri.org/IReservasService/ListarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReservasService">
+    <wsdl:port name="BasicHttpBinding_IReservasService" binding="tns:BasicHttpBinding_IReservasService">
+      <soap:address location="http://localhost:23065/ReservasService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
